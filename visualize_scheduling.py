@@ -74,6 +74,8 @@ if __name__ == "__main__":
 	
 	del task_data["deadTime"]
 	del task_data["sumDeadTime"]
+	resolution = task_data["resolution"]
+	del task_data["resolution"]
 
-	fig, ax = create_rm_gantt_chart(task_data)
+	fig, ax = create_rm_gantt_chart(task_data, resolution)
 	plt.show()
